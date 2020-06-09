@@ -7,7 +7,7 @@ for (username of usernames) {
     // add data element of username
     username.setAttribute('data-username',user);
     if (usernames_set.has(user) == true){
-        let random_colour = Math.floor(Math.random()*16777215).toString(16);
+        let random_colour = (Math.floor(Math.random() * 2 ** 24)).toString(16).padStart(0, 6);
         const duplicateUsers = document.querySelectorAll(`[data-username="${user}"]`);
         Array.from(duplicateUsers).forEach(e => e.style["background-color"] = "#" + random_colour);
         
