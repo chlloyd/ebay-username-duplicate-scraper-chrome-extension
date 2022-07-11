@@ -1,15 +1,12 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Ebay username duplicate finder",
     "version": "1.0",
     "description": "Finds duplicate usernames on ebay's awaiting dispatch page",
+
     "content_scripts": [
         {
-            "matches": [
-                "https://www.ebay.co.uk/sh/ord/*"
-            ],
-            "js":[
-                "content.js"
-            ]
+            "matches": ["https://www.ebay.co.uk/sh/ord*"],
+            "js": ["content.js"]
         }]
 }
